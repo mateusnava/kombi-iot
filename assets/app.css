@@ -1,0 +1,65 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Arial';
+  color: #FFF;
+  background-color: #253755;
+}
+
+.container {
+  height: 100%;
+}
+
+.container-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 40%;
+}
+
+.container-history {
+  position: relative;
+  height: auto;
+  margin: 10px;
+  padding: 5px 0;
+}
+
+.container-history .layer {
+  position: absolute;
+  background-color: #FFF;
+  opacity: 0.1;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.card {
+  border-radius: 10px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+h1 {
+  margin: 5px;
+  font-size: 2rem;
+}
+
+td {
+  text-align: center;
+  font-size: 12px;
+  padding: 5px 0;
+}
+
+table {
+  width: 100%;
+}
+
+tr:nth-child(odd) {
+  color: #b2bec3;
+  font-weight: bold;
+}
+
+.text-left {
+  text-align: left;
+}
