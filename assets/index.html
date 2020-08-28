@@ -1,51 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta name="theme-color" content="#253755">
-  <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#253755" />
+    <link rel="manifest" href="/manifest.json" />
 
-  <title>Kombi</title>
+    <title>Kombi</title>
 
-  <link rel="stylesheet" type="text/css" href="/assets/app.css">
-  <script src="/assets/vue.js"></script>
-</head>
-<body>
-  <div class="container" id="app">
-    <div class="container-cards">
-      <div class="card" v-if="!data.in.temperature">
-        Carregando...
+    <link rel="stylesheet" type="text/css" href="/assets/app.css" />
+    <script src="/assets/vue.js"></script>
+  </head>
+  <body>
+    <div class="container" id="app">
+      <div class="container-cards">
+        <div class="card" v-if="!data.in.temperature">Carregando...</div>
+
+        <div class="card" v-if="data.in.temperature">
+          <small>IN</small>
+          <h1>
+            {{data.in.temperature && data.in.temperature.toFixed(1)}} °C /
+            {{data.in.humidity && data.in.humidity.toFixed(0)}}%
+          </h1>
+        </div>
+        <div class="card" v-if="data.in.temperature">
+          <small>OUT</small>
+          <h1>n/a</h1>
+        </div>
       </div>
 
-      <div class="card" v-if="data.in.temperature">
-        <small>IN</small>
-        <h1>{{data.in.temperature && data.in.temperature.toFixed(1)}} °C  / {{data.in.humidity && data.in.humidity.toFixed(0)}}%</h1>
-      </div>
-      <div class="card" v-if="data.in.temperature">
-        <small>OUT</small>
-        <h1>n/a</h1>
+      <div class="container-history">
+        <div class="layer"></div>
+        <table>
+          <tr>
+            <td style="width: 50%">📅</td>
+            <td style="width: 25%">in</td>
+            <td style="width: 25%">out</td>
+          </tr>
+          <tr v-for="item in getSavedItems()">
+            <td>{{ new Date(item.time).toLocaleString() }}</td>
+            <td>
+              {{ item.in.temperature.toFixed(1)}} C ° /
+              {{item.in.humidity.toFixed(0) }}%
+            </td>
+            <td>n/a</td>
+          </tr>
+        </table>
       </div>
     </div>
 
-    <div class="container-history">
-      <div class="layer"></div>
-      <table>
-        <tr>
-          <td style="width: 50%;">📅</td>
-          <td style="width: 25%;">in</td>
-          <td style="width: 25%;">out</td>
-        </tr>
-        <tr v-for="item in getSavedItems()">
-          <td>{{ new Date(item.time).toLocaleString() }}</td>
-          <td>{{ item.in.temperature.toFixed(1)}} C ° / {{item.in.humidity.toFixed(0) }}%</td>
-          <td>n/a</td>
-        </tr>
-      </table>
-    </div>
-  </div>
-
-  <script src="/assets/app.js"></script>
-</body>
+    <script src="/assets/app.js"></script>
+  </body>
 </html>

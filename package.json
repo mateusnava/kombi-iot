@@ -1,12 +1,15 @@
 {
   "name": "kombi",
   "version": "1.0.0",
-  "description": "",
+  "description": "Kombi IOT",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "prettier --write ."
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "prettier": "^2.1.1"
+  }
 }

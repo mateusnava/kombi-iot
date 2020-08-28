@@ -1,40 +1,41 @@
 const app = new Vue({
-  el: '#app',
+  el: "#app",
   data() {
-    return ({
+    return {
       data: {
         in: {},
-        out: {}
+        out: {},
       },
-    })
+    };
   },
   methods: {
     newData: (data) => {
       const item = {
         ...data,
-        time: Date.now()
-      }
-      const items = JSON.parse(localStorage.getItem('items') || '[]')
-      items.push(item)
+        time: Date.now(),
+      };
+      const items = JSON.parse(localStorage.getItem("items") || "[]");
+      items.push(item);
       if (items.length > 100) {
-        items.shift()
+        items.shift();
       }
-      localStorage.setItem('items', JSON.stringify(items))
+      localStorage.setItem("items", JSON.stringify(items));
     },
     getSavedItems: () => {
-      return JSON.parse(localStorage.getItem('items') || '[]').sort((a, b) => b.time - a.time)
-    }
+      return JSON.parse(localStorage.getItem("items") || "[]").sort(
+        (a, b) => b.time - a.time
+      );
+    },
   },
-  mounted () {
+  mounted() {
     const fetchData = () => {
-      this.loading = true
-      return fetch('/data')
-        .then(async (response) => {
-          const fakeData = {in: {temperature: 20, humidity: 30}}
-          this.data = await response.json()
-          this.newData(this.data)
-        })
-    }
-    fetchData()
-  }
-})
+      this.loading = true;
+      return fetch("/data").then(async (response) => {
+        const fakeData = { in: { temperature: 20, humidity: 30 } };
+        this.data = await response.json();
+        this.newData(this.data);
+      });
+    };
+    fetchData();
+  },
+});
