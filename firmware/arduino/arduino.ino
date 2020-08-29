@@ -20,11 +20,13 @@ void setup(){
   Serial1.begin(9600);
 
   pinMode(LED, OUTPUT);
+
+  if (!sensors.getAddress(sensorOut, 0)) 
+     Serial.println("Sensores nao encontrados !")  ;
 }
  
 void loop() {
   digitalWrite(LED, HIGH);
-
   float humIn = dhtIn.readHumidity();
   float tempIn = dhtIn.readTemperature();
 
@@ -52,5 +54,5 @@ void loop() {
 
   delay(1000);
   digitalWrite(LED, LOW);
-  delay(5000);
+  delay(9000);
  }
