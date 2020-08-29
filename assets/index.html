@@ -20,13 +20,13 @@
         <div class="card" v-if="data.in.temperature">
           <small>IN</small>
           <h1>
-            {{data.in.temperature && data.in.temperature.toFixed(1)}} °C /
+            {{data.in.temperature && data.in.temperature.toFixed(1)}}°C /
             {{data.in.humidity && data.in.humidity.toFixed(0)}}%
           </h1>
         </div>
         <div class="card" v-if="data.in.temperature">
           <small>OUT</small>
-          <h1>n/a</h1>
+          <h1>{{data.out && data.out.temperature && data.out.temperature.toFixed(1)}}°C</h1>
         </div>
       </div>
 
@@ -41,10 +41,10 @@
           <tr v-for="item in getSavedItems()">
             <td>{{ new Date(item.time).toLocaleString() }}</td>
             <td>
-              {{ item.in.temperature.toFixed(1)}} C ° /
+              {{ item.in.temperature.toFixed(1)}}°C /
               {{item.in.humidity.toFixed(0) }}%
             </td>
-            <td>n/a</td>
+            <td>{{item.out && item.out.temperature && item.out.temperature.toFixed(1)}}°C</td>
           </tr>
         </table>
       </div>
