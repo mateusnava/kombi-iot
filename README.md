@@ -2,7 +2,7 @@
 
 IOT project for my Kombi "motorhome": **MARGARIDA**
 
-![Circuit](doc/kombi.jpeg | width=300)
+<img src="doc/kombi.jpeg" width=300 align=center>
 
 More informations about Margarida's homemade construction can be found at: https://www.instagram.com/p/B-5YG3DA-0n/
 
@@ -22,7 +22,9 @@ The project consists of three layers
 This project is designed to work only in offline mode, for this Linkit creates an internal WIFI connection.
 
 Image of the circuit:
-![Circuit](doc/circuit1.jpeg | width=300)
+
+<img src="doc/circuit1.jpeg" width=200 align=center>
 
 Image of the WebAPP:
-![WebAPP](doc/webapp.jpeg | width=300)
+
+<img src="doc/webapp.jpeg" width=200 align=center>
