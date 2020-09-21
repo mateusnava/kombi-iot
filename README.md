@@ -31,3 +31,5 @@ Image of the circuit:
 Image of the WebAPP:
 
 <img src="doc/webapp.jpeg" width=200 align=center>
+
+* I need to use the old javascript syntax because of the node version of the linkit
