@@ -4,7 +4,10 @@ IOT project for my Kombi "motorhome": **MARGARIDA**
 
 <img src="doc/kombi.jpeg" width=300 align=center>
 
-More informations about Margarida's homemade construction can be found at: https://www.instagram.com/p/B-5YG3DA-0n/
+More informations about Margarida's homemade construction can be found at:
+- https://www.instagram.com/p/B-5YG3DA-0n/
+- https://www.instagram.com/stories/highlights/18118392919032269/
+- https://www.instagram.com/stories/highlights/17854754692769594/
 
 ## Module 1 - Temperature Monitor
 
