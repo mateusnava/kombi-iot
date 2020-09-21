@@ -19,7 +19,7 @@ The circuit uses:
 
 The project consists of three layers
 - A firmware to obtain the current values of the sensors every 10 seconds;
-- A node.js project to obtain these values ​​via serial communication and expose them to the HTTP endpoint;
+- A node.js project to obtain these values ​​via serial communication and expose them to the HTTP endpoint (I needed to use the old javascript syntax because of the linkit node version);
 - A WebAPP to obtain values from the node endpoint, shows values to user and stores it in local storage (NEED REFACTOR).
 
 This project is designed to work only in offline mode, for this Linkit creates an internal WIFI connection.
@@ -31,5 +31,3 @@ Image of the circuit:
 Image of the WebAPP:
 
 <img src="doc/webapp.jpeg" width=200 align=center>
-
-* I need to use the old javascript syntax because of the node version of the linkit
