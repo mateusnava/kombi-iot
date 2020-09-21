@@ -13,7 +13,7 @@ More informations about Margarida's homemade construction can be found at:
 
 The circuit uses:
 - Linkit Smart DUO
-- Conversor Step Down 6/24VDC para 5V 3A USB
+- Step Down converter 6/24VDC para 5V 3A USB
 - Temperature/humidity sensor DHT11 - Internal
 - Temperature sensor DS18B20 - External
 
